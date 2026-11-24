@@ -3,8 +3,8 @@
 
 #include "galaxy.h"
 
-// rotational velocity of a galaxy for a given radius
-double	rotatinal_velocity(const	t_galaxy *galaxy,double	radius);
+// keplerian rotational velocity of a galaxy for a given radius
+double	keplerian_velocity(const	t_galaxy *galaxy,double	radius);
 
 
 
