@@ -1,0 +1,9 @@
+#compiled files
+*.o
+*.a
+
+#temp files
+*.swp
+*.swo
+*.DS_Store
+
