@@ -1,9 +1,15 @@
-#compiled files
+# Compiled files
 *.o
 *.a
+*.so
 
-#temp files
+# Executable
+/maser
+
+# Editor and system files
+.vscode/
+.DS_Store
+
+# Temporary files
 *.swp
-*.swo
-*.DS_Store
-
+*~
