@@ -15,7 +15,7 @@ double	keplerian_velocity(const	t_galaxy *galaxy, double	radius)
 	if	(radius <= 0.0 || mass <= 0.0)
 		return NAN;
 
-	return	sqrt(G_ASTRO * mass / radius);
+	return sqrt(G_ASTRO * mass / radius);
 }
 
 double	keplerian_angular_velocity(const	t_galaxy *galaxy, double radius)
@@ -40,4 +40,19 @@ double	keplerian_period(const	t_galaxy *galaxy, double	radius)
 		return NAN;
 
 	return (2*PI / (angular_velocity * SECONDS_PER_YEAR));
+}
+
+double	schwarzschild_radius(const	t_galaxy *galaxy)
+{
+	double	mass;
+
+	if	(galaxy == NULL)
+		return NAN;
+
+	mass = galaxy->bh_mass;
+
+	if	(mass <= 0.0)
+		return NAN;
+
+	return ((2 * G_ASTRO * mass) / (SPEED_OF_LIGHT * SPEED_OF_LIGHT));
 }

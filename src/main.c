@@ -12,9 +12,9 @@ int	main(void)
 	double	t_in;
 	double 	t_out;
 
-	galaxy.bh_mass = 4.0e6;
-	galaxy.inner_radius = 0.003;
-	galaxy.outer_radius = 1.0;
+	galaxy.bh_mass = 1.0e7;
+	galaxy.inner_radius = 0.1;
+	galaxy.outer_radius = 0.5;
 
 	v_in = keplerian_velocity(&galaxy, galaxy.inner_radius);
 	v_out = keplerian_velocity(&galaxy, galaxy.outer_radius);
@@ -34,6 +34,13 @@ int	main(void)
 	printf("T_in = %.2f years\n", t_in);
 	printf("T_out = %.2f years\n", t_out);
 
+	printf("Schwarzschild radius: %.6e pc\n", schwarzschild_radius(&galaxy));
+
+	double rs = schwarzschild_radius(&galaxy);
+
+	printf("Inner radius / Rs: %.2e\n", galaxy.inner_radius / rs);
+	printf("Outer radius / Rs: %.2e\n", galaxy.outer_radius / rs);
+	
 	return 0;
 
 }

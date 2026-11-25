@@ -6,5 +6,6 @@
 double	keplerian_velocity(const	t_galaxy *galaxy, double	radius);
 double	keplerian_angular_velocity(const	t_galaxy *galaxy, double radius);
 double	keplerian_period(const	t_galaxy *galaxy, double	radius);
+double	schwarzschild_radius(const	t_galaxy *galaxy);
 
 #endif 
