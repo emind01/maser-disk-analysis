@@ -13,3 +13,10 @@
 # Temporary files
 *.swp
 *~
+
+# Python virtual environment
+.venv/
+
+# Python cache
+__pycache__/
+*.pyc
